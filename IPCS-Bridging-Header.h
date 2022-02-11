@@ -3,3 +3,6 @@
 //
 
 #import <libproc.h>
+#import "ipcs.h"
+#import <sys/shm.h>
+#import <sys/ipc.h>

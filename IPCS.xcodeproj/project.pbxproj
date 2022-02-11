@@ -15,6 +15,8 @@
 		3697153627B70745008E6AB6 /* IPCSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3697153527B70745008E6AB6 /* IPCSUITestsLaunchTests.swift */; };
 		3697154527B70768008E6AB6 /* UnixProcessInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3697154427B70768008E6AB6 /* UnixProcessInfo.swift */; };
 		3697154A27B70C2C008E6AB6 /* UnixProcessInfoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3697154927B70C2C008E6AB6 /* UnixProcessInfoTests.swift */; };
+		3697154E27B712FE008E6AB6 /* SharedMemorySegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3697154D27B712FE008E6AB6 /* SharedMemorySegment.swift */; };
+		3697155127B71E45008E6AB6 /* SharedMemorySegmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3697155027B71E45008E6AB6 /* SharedMemorySegmentTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,10 @@
 		3697154427B70768008E6AB6 /* UnixProcessInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnixProcessInfo.swift; sourceTree = "<group>"; };
 		3697154627B70A35008E6AB6 /* IPCS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IPCS-Bridging-Header.h"; sourceTree = "<group>"; };
 		3697154927B70C2C008E6AB6 /* UnixProcessInfoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnixProcessInfoTests.swift; sourceTree = "<group>"; };
+		3697154C27B712B4008E6AB6 /* ipcs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ipcs.h; sourceTree = "<group>"; };
+		3697154D27B712FE008E6AB6 /* SharedMemorySegment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedMemorySegment.swift; sourceTree = "<group>"; };
+		3697154F27B715B2008E6AB6 /* ipcs.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ipcs.c; sourceTree = "<group>"; };
+		3697155027B71E45008E6AB6 /* SharedMemorySegmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedMemorySegmentTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +89,8 @@
 				3697153227B70745008E6AB6 /* IPCSUITests */,
 				3697151527B70744008E6AB6 /* Products */,
 				3697154627B70A35008E6AB6 /* IPCS-Bridging-Header.h */,
+				3697154C27B712B4008E6AB6 /* ipcs.h */,
+				3697154F27B715B2008E6AB6 /* ipcs.c */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,6 +110,7 @@
 				3697151727B70744008E6AB6 /* IPCSApp.swift */,
 				3697151927B70744008E6AB6 /* ContentView.swift */,
 				3697154427B70768008E6AB6 /* UnixProcessInfo.swift */,
+				3697154D27B712FE008E6AB6 /* SharedMemorySegment.swift */,
 				3697151B27B70744008E6AB6 /* Assets.xcassets */,
 				3697152027B70744008E6AB6 /* IPCS.entitlements */,
 				3697151D27B70744008E6AB6 /* Preview Content */,
@@ -121,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				3697154927B70C2C008E6AB6 /* UnixProcessInfoTests.swift */,
+				3697155027B71E45008E6AB6 /* SharedMemorySegmentTests.swift */,
 			);
 			path = IPCSTests;
 			sourceTree = "<group>";
@@ -268,6 +278,7 @@
 				3697151A27B70744008E6AB6 /* ContentView.swift in Sources */,
 				3697151827B70744008E6AB6 /* IPCSApp.swift in Sources */,
 				3697154527B70768008E6AB6 /* UnixProcessInfo.swift in Sources */,
+				3697154E27B712FE008E6AB6 /* SharedMemorySegment.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,6 +287,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3697154A27B70C2C008E6AB6 /* UnixProcessInfoTests.swift in Sources */,
+				3697155127B71E45008E6AB6 /* SharedMemorySegmentTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
