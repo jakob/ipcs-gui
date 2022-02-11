@@ -13,6 +13,8 @@
 		3697151F27B70744008E6AB6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3697151E27B70744008E6AB6 /* Preview Assets.xcassets */; };
 		3697153427B70745008E6AB6 /* IPCSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3697153327B70745008E6AB6 /* IPCSUITests.swift */; };
 		3697153627B70745008E6AB6 /* IPCSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3697153527B70745008E6AB6 /* IPCSUITestsLaunchTests.swift */; };
+		3697154527B70768008E6AB6 /* UnixProcessInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3697154427B70768008E6AB6 /* UnixProcessInfo.swift */; };
+		3697154A27B70C2C008E6AB6 /* UnixProcessInfoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3697154927B70C2C008E6AB6 /* UnixProcessInfoTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,7 +45,9 @@
 		3697152F27B70745008E6AB6 /* IPCSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IPCSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3697153327B70745008E6AB6 /* IPCSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPCSUITests.swift; sourceTree = "<group>"; };
 		3697153527B70745008E6AB6 /* IPCSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPCSUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3697154427B70768008E6AB6 /* UnixProcessInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnixProcessInfo.swift; sourceTree = "<group>"; };
 		3697154627B70A35008E6AB6 /* IPCS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IPCS-Bridging-Header.h"; sourceTree = "<group>"; };
+		3697154927B70C2C008E6AB6 /* UnixProcessInfoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnixProcessInfoTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,7 @@
 			children = (
 				3697151727B70744008E6AB6 /* IPCSApp.swift */,
 				3697151927B70744008E6AB6 /* ContentView.swift */,
+				3697154427B70768008E6AB6 /* UnixProcessInfo.swift */,
 				3697151B27B70744008E6AB6 /* Assets.xcassets */,
 				3697152027B70744008E6AB6 /* IPCS.entitlements */,
 				3697151D27B70744008E6AB6 /* Preview Content */,
@@ -115,6 +120,7 @@
 		3697152827B70745008E6AB6 /* IPCSTests */ = {
 			isa = PBXGroup;
 			children = (
+				3697154927B70C2C008E6AB6 /* UnixProcessInfoTests.swift */,
 			);
 			path = IPCSTests;
 			sourceTree = "<group>";
@@ -261,6 +267,7 @@
 			files = (
 				3697151A27B70744008E6AB6 /* ContentView.swift in Sources */,
 				3697151827B70744008E6AB6 /* IPCSApp.swift in Sources */,
+				3697154527B70768008E6AB6 /* UnixProcessInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,6 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3697154A27B70C2C008E6AB6 /* UnixProcessInfoTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
