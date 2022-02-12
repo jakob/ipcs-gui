@@ -7,7 +7,8 @@
 
 import Foundation
 
-struct SharedMemorySegment {
+struct SharedMemorySegment: Identifiable {
+	let id: Int
 	let size: Int
 	let createProcess: UnixProcessInfo?
 	let lastOperationProcess: UnixProcessInfo?
@@ -16,7 +17,8 @@ struct SharedMemorySegment {
 	let detachDate: Date
 	let controlDate: Date
 	
-	init(shmid_ds: __shmid_ds_new) {
+	init(id: Int, shmid_ds: __shmid_ds_new) {
+		self.id = id
 		self.size = shmid_ds.shm_segsz
 		self.createProcess = UnixProcessInfo(runningProcessWithPid: shmid_ds.shm_cpid)
 		self.lastOperationProcess = UnixProcessInfo(runningProcessWithPid: shmid_ds.shm_lpid)
@@ -32,6 +34,7 @@ struct SharedMemorySegment {
 		var sysres: Int32 = 0
 		while (sysres == 0) {
 			var ds = __shmid_ds_new()
+			let id = Int(cursor - 1)
 			withUnsafeMutablePointer(to: &ds) { shmptr in
 				var ic = IPCS_command(
 					ipcs_magic: IPCS_MAGIC,
@@ -46,7 +49,7 @@ struct SharedMemorySegment {
 				cursor = ic_out.ipcs_cursor
 			}
 			if (sysres == 0) {
-				result.append(SharedMemorySegment(shmid_ds: ds))
+				result.append(SharedMemorySegment(id: id, shmid_ds: ds))
 			}
 		}
 		if (errno == ENOENT || errno == ERANGE) {
