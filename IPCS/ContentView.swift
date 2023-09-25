@@ -9,12 +9,24 @@ import SwiftUI
 
 struct ContentView: View {
 	
-	let segments: [SharedMemorySegment]
+	@State var segments: [SharedMemorySegment]
 	
 	var body: some View {
 		VStack(alignment: .leading) {
-			Text("Shared Memory Segments")
-				.font(.largeTitle)
+			HStack() {
+				Text("Shared Memory Segments")
+					.font(.largeTitle)
+				Spacer()
+				Button(
+					action: {
+						segments = try! SharedMemorySegment.all()
+					},
+					label: {
+						Image(systemName: "arrow.clockwise")
+					}
+				).controlSize(.large)
+				
+			}
 			Table(segments) {
 				TableColumn("Size") { segment in
 					Text("\(segment.size) bytes").frame(minHeight: 50)
