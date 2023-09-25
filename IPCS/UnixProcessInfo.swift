@@ -5,7 +5,7 @@
 //  Created by Jakob Egger on 11.02.22.
 //
 
-import Foundation
+import AppKit
 
 struct UnixProcessInfo {
 	let pid: Int
@@ -24,5 +24,13 @@ struct UnixProcessInfo {
 		} else {
 			self.path = "Error \(String(cString:strerror(errno)!))"
 		}
+	}
+	
+	var appIcon: NSImage? {
+		var url = URL(fileURLWithPath: path)
+		while url.pathComponents.count > 1 && !url.lastPathComponent.hasSuffix("app") {
+			url.deleteLastPathComponent()
+		}
+		return NSWorkspace.shared.icon(forFile: url.path)
 	}
 }

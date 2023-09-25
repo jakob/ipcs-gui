@@ -58,10 +58,15 @@ struct ContentView: View {
 	
 	
 	func processCell(_ process: UnixProcessInfo) -> some View {
-		return VStack(alignment: .leading, spacing: 2) {
-			Text("\(process.name) (\(String(process.pid)))")
-			Text(process.path).font(Font.caption).foregroundColor(.secondary)
-		}.lineLimit(1).textSelection(.enabled)
+		HStack {
+			if let icon = process.appIcon {
+				Image(nsImage: icon)
+			}
+			VStack(alignment: .leading, spacing: 2) {
+				Text("\(process.name) (\(String(process.pid)))")
+				Text(process.path).font(Font.caption).foregroundColor(.secondary)
+			}.lineLimit(1).textSelection(.enabled)
+		}
 	}
 	
 	func dateCell(_ date: Date) -> some View {
